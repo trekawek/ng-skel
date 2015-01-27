@@ -25,5 +25,8 @@ A simple project skeleton built from following modules:
 
 ### Screenshots
 
+#### Login screen
 ![Login](https://raw.githubusercontent.com/trekawek/ng-skel/master/doc/login.png)
+
+#### Project list
 ![Projects](https://raw.githubusercontent.com/trekawek/ng-skel/master/doc/projects.png)
