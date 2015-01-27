@@ -22,3 +22,8 @@ A simple project skeleton built from following modules:
     npm install
     ./node_modules/bower/bin/bower install
     npm start
+
+### Screenshots
+
+![Login](https://raw.githubusercontent.com/trekawek/ng-skel/master/doc/login.png)
+![Projects](https://raw.githubusercontent.com/trekawek/ng-skel/master/doc/projects.png)
