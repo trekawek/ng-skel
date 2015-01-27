@@ -2,6 +2,10 @@
   "name": "ng-skel",
   "version": "1.0.0",
   "description": "AngularJS project skeleton",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:trekawek/ng-skel.git"
+  },
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js"
