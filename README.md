@@ -9,3 +9,16 @@ A simple project skeleton built from following modules:
 * [Redis](http://redis.io/)
 * [Docker](https://www.docker.com/)
 * [Fig](http://www.fig.sh/)
+
+### Starting with Docker & Fig
+
+1. Install Docker and Fig
+2. `fig up`
+3. Open http://localhost:3000
+
+### Starting manually
+
+    # (start redis)
+    npm install
+    ./node_modules/bower/bin/bower install
+    npm start
