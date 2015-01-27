@@ -1,0 +1,10 @@
+app:
+  build: .
+  links:
+   - redis
+  ports:
+   - "3000:3000"
+  volumes:
+   - ./redis-data:/data
+redis:
+  image: redis

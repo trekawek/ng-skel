@@ -1,0 +1,27 @@
+<h3>Projects</h3>
+
+<ul class="list-group">
+    <li ng-repeat="(id, project) in projects" class="list-group-item">
+        <span class="pull-right">
+            <button class="btn btn-xs btn-success">
+                <span class="glyphicon glyphicon-folder-open"></span>
+            </button>
+
+            <button class="btn btn-xs btn-danger" ng-click="removeProject(id)">
+                <span class="glyphicon glyphicon-trash"></span>
+            </button>
+        </span>
+        {{project.name}}
+    </li>
+</ul>
+
+<h3>Add project</h3>
+
+<form role="form" ng-init="form = {}">
+    <div class="form-group">
+        <label>Name</label>
+        <input name="name" ng-model="form.name" required="required" class="form-control"/>
+    </div>
+
+    <button ng-click="addProject(form)" class="btn btn-primary">Add</button>
+</form>

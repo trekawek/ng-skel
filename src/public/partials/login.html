@@ -1,0 +1,14 @@
+<form ng-show="!loggedIn" role="form" ng-init="authForm = {}">
+  <div class="form-group">
+    <label>E-mail</label>
+    <input type="email" name="email" ng-model="authForm.email" required="required" class="form-control"/>
+  </div>
+
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" name="password" ng-model="authForm.password" required="required" class="form-control"/>
+  </div>
+
+  <button ng-click="handleLoginBtnClick(authForm)" class="btn btn-primary">Sign-in</button>
+  <button ng-click="handleRegisterBtnClick(authForm)" class="btn btn-success">Register</button>
+</form>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-cookie/angular-cookie.js"></script>
+        <script src="bower_components/ng-token-auth/dist/ng-token-auth.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <title>App</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Static navbar -->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#/">App</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav" ng-show="loggedIn">
+                            <li class="dropdown">
+                                <a ui-sref="logged.projects" role="button">Projects</a>
+                            </li>
+                        </ul>
+                        <div ng-controller="LogoutCtrl">
+                            <div ng-show="loggedIn" class="nav navbar-nav navbar-form navbar-right">
+                                <button ng-click="handleLogoutBtnClick()" class="btn btn-warning">Logout</button>
+                            </div>
+                        </div>
+
+                    </div><!--/.nav-collapse -->
+
+                </div><!--/.container-fluid -->
+            </nav>
+
+            <div ng-show="flashMsg" class="alert alert-{{flashMsgType}}" role="alert">
+                {{flashMsg}}
+                <button ng-click="flashMsg = ''" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+
+            <div ui-view></div>
+        </div>
+
+        <footer class="footer">
+          <div class="container">
+            <p class="text-muted"><a href="http://tomek.rekawek.eu">trekawek</a> &copy; 2015</p>
+          </div>
+        </footer>
+
+        <script src="js/controller/app.js"></script>
+        <script src="js/controller/routes.js"></script>
+        <script src="js/controller/authCtrl.js"></script>
+        <script src="js/controller/logoutCtrl.js"></script>
+        <script src="js/controller/projectsCtrl.js"></script>
+    </body>
+</html>
